@@ -41,7 +41,8 @@ dane_03 <- dplyr::mutate(dane, dplyr::across(sepal.length:petal.width, \(i) log1
 dane_04 <- dplyr::mutate(dane, dplyr::across(dplyr::contains("length"), \(i) log10(i)))
 
 #across, jedna kolumna po nazwie, dwie kolumny na poczatku nazwy
-dane_05 <- dplyr::mutate(dane, dplyr::across(c(sepal.length, dplyr::contains("width"), \(i) sqrt(i)))
+dane_05 <- dplyr::mutate(dane, dplyr::across(c(sepal.length, dplyr::contains("width"), \(i) sqrt(i))))
+
 
 
                          #across i zwykłe mutate: kolumny zaczynające się od petal = log2, dodaj kolumne z wynikiem dzielenia kolumn petal
